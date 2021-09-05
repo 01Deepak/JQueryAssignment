@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="jqueryfinalassignment.css">
+    <script src="jqueryfinalassignment.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+    <title>Jquery Final Assignment</title>
+</head>
+<body onload="countrystate(),appendTableRows()">
+    <div id="formdiv">
+        <form>
+            <table>
+                <tr>
+                    <th colspan="4">Personal Details</th>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <label for="txtname">Name</label>
+                    </td>
+                    <td>
+                        <!-- //name input field -->
+                        
+                        <input type="text" id="txtname">
+                    </td>
+                    <td>
+                        <label for="txtemail">Email</label>
+                    </td>
+                    <td>
+                        <!-- //Email -->
+                        
+                        <input type="email" id="txtemail">
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <label for="ddcountry">Country</label>
+                    </td>
+                    <td>
+                        <!-- //country -->
+                       
+                        <select id="ddcountry" onchange="changecountry()" >
+                            <option value="select">Select</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="ddstate">State</label>
+                    </td>
+                    <td>
+                        <!-- //state -->
+                        
+                        <select id="ddstate">
+                            <option value="select">Select</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">Educational History</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="txtsubject">Subject</label>
+                    </td>
+                    <td colspan="3">
+                        <!-- //subject with autocomplete -->
+                        
+                        <input type="text" id="txtsubject" onblur="savesubjectintolocalstorage()">
+                    </td>
+                   
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="ddselectsubject">Select Subject</label>
+                    </td>
+                    <td>
+                        <!-- //select Subject -->
+                        
+                        <select id="ddselectsubject">
+                            <option value="select">Select</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="txtaddmarks">Add Marks</label>
+                    </td>
+                    <td>
+                        <!-- //add marks -->
+                        
+                        <input type="text" id="txtaddmarks">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <!-- //save button -->
+                        <input type="button" value="Save" class="savebtn" onclick="formDetails()">
+                        <!-- <input type="button" value="test" class="savebtn" onclick="formDetails()">
+                        <input type="button" value="appendtablerow" class="savebtn" onclick="appendTableRows()"> -->
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+    <div id="tablediv">
+        <table>
+            <thead style="background-color: rgb(211, 241, 156);color: green;">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>country</th>
+                    <th>State</th>
+                    <th>Sub</th>
+                    <th>Marks</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

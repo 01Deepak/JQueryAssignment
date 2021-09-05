@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>country</title>
+</head>
+<body onload="appendcountry('countryname','#selectcountry')">
+    <section>
+        <form>
+            <div id="div1">
+                <h1>Add country</h1>
+                <label for="txtnewcountry">Add country</label>
+                <input type="text" id="txtnewcountry" >
+                <br><br>
+                <input  type="button"  class="btn"  value="save"  onclick="addcountry()">
+                <br><br>
+                <!-- <input type="button" class="btn" value="removecountry" onclick="removecountry()"><br><br> -->
+            </div>
+            <div id="div2">
+                <h1>Add State</h1>
+                <Label for="selectcountry">select country</Label>
+                
+                <select id="selectcountry" onchange="changecountry()">
+                    <option value="SELECT">SELECT</option>
+                </select>
+
+                <br><br>
+                <Label for="txtnewstatename">Add State</Label>
+                <input type="text" id="txtnewstatename">
+                <br><br>
+                <label for="selectstate">Select States</label>
+                <select id="selectstate">
+                    <option value="SELECT">SELECT</option>
+                </select>
+                <br><br>
+
+                <input type="button" class="btn" onclick="addstate()" value="add state">
+            </div>
+        </form>
+       
+    </section>
+   
+    
+</body>
+</html>

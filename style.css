@@ -1,0 +1,29 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 10rem;
+    color: white;
+    background: rgb(245, 244, 244);
+
+}
+section h1{
+    text-align: center;
+    color: white;
+}
+.btn{
+    background: rgb(15, 126, 21);
+    color: white;
+    width: auto;
+    text-align: center;
+    border: 2px solid yellowgreen;
+    border-radius: 4px;
+    margin-left: 7rem;
+}
+form{
+    border: 2px solid blue;
+    border-radius: 1rem;
+    background: rgb(99, 99, 99);
+    padding: 1rem 1rem;
+}
